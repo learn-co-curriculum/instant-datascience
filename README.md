@@ -4,32 +4,31 @@
 When starting any course, you likely look at the syllabus to see what's covered and answer can you do it.  In this lesson, we'll hope to give you a sense of how with just a little bit of knowledge you can make some real progress in using programs to answer questions with data.  
 
 To do so, we'll have lessons and labs on the following topics: 
-* strings
-* variables
-* lists
-* dictionaries
-* loops and iteration
-* data visualization
-* functions
+* Data types: working with text and data 
+* Variables: storing data
+* Lists: working with data in an ordered collection
+* Dictionaries: representing data as a collection of attributes   
+* Loops and iteration: repeating a sequence of instructions  
+* Data visualization: using plots to display data
+* Functions: defining and running specific procedures in code 
 
-
-So this first section will go into seven topics, with lessons and labs on each. There we will break down the content down step by step.  But this lesson is about instant data science.  So here is a whirlwind tour of what through these first topics.
+So this set of lessons will go into these topics, with lessons and labs on each. Then, we will break down the content down step by step.  But this lesson is about instant data science.  So explore that in these first topics.
 
 ### Song Analysis
 
-What makes a hit record?  Does repetitiveness help, like a lullabye?  And is our music getting more repetitive over time?  Questions like these were asked by the great computer scientist Donald Knuth in 1977, and were reasked and answered, by Colin Morris in [this article](https://pudding.cool/2017/05/song-repetition/).
+What makes a hit record?  Does repetitiveness help?  And is our music getting more repetitive over time?  Questions like these were asked by the great computer scientist Donald Knuth in 1977, and were reasked and answered, by Colin Morris in [this article](https://pudding.cool/2017/05/song-repetition/).
 
-Here is a chart that he produced showing some of the most repetitive popular artists.  How was something like this made and calculated?
+Here is a chart that Colin Morris produced showing some of the most repetitive popular artists.  How was something like this made and calculated?
 
 ![](./song-chart.png)
 
 ### Analyzing one song
 
-Let's take the song Barbara Ann, the most repetitive song of the Beach Boys, and remastered by the cast of Saved by the Bell.  
+Let's take the song Barbara Ann, the most repetitive song of the Beach Boys, and remastered by the cast of Saved by the Bell in 1990.  
 
 ![](./saved-by-bell.gif)
 
-Here are the some of the lyrics.
+How did the cast learn all of the words so easily?  Repetition. Here are the some of the lyrics.
 
     Ah, ba ba ba ba Barbara Ann
     Ba ba ba ba Barbara Ann
@@ -57,15 +56,18 @@ Here are the some of the lyrics.
 It keeps going, but you get the point.  Now let's say that we wanted to count up how many times each word in the above selection appears.  Without a computer, we could do the following: 
 
 * Place each of the words on a separate index card
-* Allocate space for a small pile for each unique word
-* Then, go through the index cards one by one
-* And for each index card, increase the size of it's related pile by one
+* Mark a region for a pile of each unique word
+* Then, go list of index cards one by one
+* And for each index card, find it's pile and increase the size of it's related pile by one
 
-Ok, now that we have a plan, let's translate this into code.
 
-### Working with Strings and Variables
+![](./index-cards.png)
 
-In code we do something similar.  First we place our pile of words, into a string, which is a data structure that just represents text.
+Let's call these steps above **our plan**.  Now that we have a plan, let's translate this into code.
+
+### Strings and Variables
+
+To solve this problem with code, we do something similar.  We start with our words in a **string**, which is a data structure that just represents text.  This is how it looks.
 
 
 ```python
@@ -79,7 +81,9 @@ In code we do something similar.  First we place our pile of words, into a strin
 
 
 
-To place have this be a string in Python, notice that we place quotes at the start and end of text.  If we don't do this, Python will give us an error.
+> What you see above in the gray box Python code.  The content in the gray box is the code you type in.  The number to the left is the line number of the code.  Below the gray box is the **output** of running the code.  So the output of creating a string, is just that same string - not very interesting. 
+
+To create a **string** in Python, notice that we place quotes at the start and end of text.  If we don't do this, Python will give us an error.
 
 
 ```python
@@ -87,12 +91,14 @@ Ah, ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann Oh Barbara Ann, take my hand
 ```
 
 
-      File "<ipython-input-61-5fbb40878925>", line 1
+      File "<ipython-input-5-5fbb40878925>", line 1
         Ah, ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann Oh Barbara Ann, take my hand Barbara Ann You got me rockin' and a-rollin' Rockin' and a-reelin' Barbara Ann ba ba Ba Barbara Ann Went to a dance, lookin' for romance Saw Barbara Ann, so I thought I'd take a chance With Barbara Ann, Barbara Ann Take my hand You got me rockin' and a-rollin' (Oh! Oh!) Rockin' and a-reelin' Barbara Ann ba ba Ba ba ba ba black sheep Ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann
                 ^
     SyntaxError: invalid syntax
 
 
+
+> So notice the output of the code in the gray box is an error - more interesting.  But let's move on.
 
 Ok, so we need the quotes for a string, but to hold onto this string and reference it later, we assign it to a variable.  
 
@@ -101,12 +107,19 @@ Ok, so we need the quotes for a string, but to hold onto this string and referen
 lyrics = "Ah, ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann Oh Barbara Ann, take my hand Barbara Ann You got me rockin' and a-rollin' Rockin' and a-reelin' Barbara Ann ba ba Ba Barbara Ann Went to a dance, lookin' for romance Saw Barbara Ann, so I thought I'd take a chance With Barbara Ann, Barbara Ann Take my hand You got me rockin' and a-rollin' (Oh! Oh!) Rockin' and a-reelin' Barbara Ann ba ba Ba ba ba ba black sheep Ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann"
 ```
 
-Now whenever we type the word lyrics into Python we can see our string.
+Now whenever we type the word `lyrics` into Python we reference our string.
 
 
 ```python
 lyrics
 ```
+
+
+
+
+    "Ah, ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann Oh Barbara Ann, take my hand Barbara Ann You got me rockin' and a-rollin' Rockin' and a-reelin' Barbara Ann ba ba Ba Barbara Ann Went to a dance, lookin' for romance Saw Barbara Ann, so I thought I'd take a chance With Barbara Ann, Barbara Ann Take my hand You got me rockin' and a-rollin' (Oh! Oh!) Rockin' and a-reelin' Barbara Ann ba ba Ba ba ba ba black sheep Ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann"
+
+
 
 Ok, so strings are great for performing operations on text. For example we can call a method `title` on a string to capitaize the first letter of each word.
 
@@ -115,7 +128,14 @@ Ok, so strings are great for performing operations on text. For example we can c
 lyrics.title()
 ```
 
-The uniformity here is good.  After all, eventually, we want to place the lowercased "ba" and the uppercased "Ba" in the same pile, so let's just make them the same.  We can accomplish this by setting `lyrics.title()` equal to a new variable `titled_lyrics`.
+
+
+
+    "Ah, Ba Ba Ba Ba Barbara Ann Ba Ba Ba Ba Barbara Ann Oh Barbara Ann, Take My Hand Barbara Ann You Got Me Rockin' And A-Rollin' Rockin' And A-Reelin' Barbara Ann Ba Ba Ba Barbara Ann Went To A Dance, Lookin' For Romance Saw Barbara Ann, So I Thought I'D Take A Chance With Barbara Ann, Barbara Ann Take My Hand You Got Me Rockin' And A-Rollin' (Oh! Oh!) Rockin' And A-Reelin' Barbara Ann Ba Ba Ba Ba Ba Ba Black Sheep Ba Ba Ba Ba Barbara Ann Ba Ba Ba Ba Barbara Ann"
+
+
+
+This is a good change.  Let's store it in a new variable called `titled_lyrics`.
 
 
 ```python
@@ -130,18 +150,18 @@ titled_lyrics
 
 
 
-Not bad, strings are great at manipulating all of our text at once.  However, strings **are not** good for thinking about each word as a separate entity.  For that we should use a list.
+Not bad at all.  Strings are great at manipulating all of our text at once.  However, if you remember **our plan**, the first step was to place each word on a separate index card.  But strings **are not** good at separating our text into individual words.  For that we need a new data structure called a **list**.
 
-### Lists in Python 
+### Lists
 
-So to think of our text as having separate words need to transform this continuous string into a list of words.  We can tell our computer to do this.  But speak on it's level, think of the computer as a small child who works really fast.  So tell it, "Go through each character in the string, and when you see a space, split the string into a new string".  Here is those directions in code.
+To separate our string into a individual words, we need to change this continuous string into a list.  Here is how we tell the computer to do this: split the string into a different entity every time you see a space.  Here are those directions in code.
 
 
 ```python
 list_of_lyrics = titled_lyrics.split(' ')
 ```
 
-We store the result to a variable.  Do you want to see what it looks like?  Ok, but be prepared for a lot of words.  Just scroll through them, and we'll meet up afterwards.
+Ok, let's see what `list_of_lyrics` looks like.  You're about to see a lot of words, so just scroll through them, and we'll meet up afterwards.
 
 
 ```python
@@ -249,14 +269,21 @@ list_of_lyrics
 
 
 
-Ok, so this is a list.  It's an ordered collection, and as you can see we are now treating each word as an individual entity.  Each individual entity of a list is called an element.  How many elements are there in this list?
+Ok, so this is a list.  It's an ordered collection, and as you can see we are now treating each word as an individual **entity**.  Each individual entity of a list is called an element.  How many elements are there in this list?
 
 
 ```python
 len(list_of_lyrics)
 ```
 
-Ok, but what about unique words. Let's see a list of all of the unique words of the list?
+
+
+
+    95
+
+
+
+Ok, but remember the second step of our plan was to allocate space for each unique word.  So now that we have a list of all words, let's see just the unique words.
 
 
 ```python
@@ -268,20 +295,67 @@ unique_words = set(list_of_lyrics)
 unique_words
 ```
 
-Ok, now we can see that our unique words is significantly smaller than our total list of words.  How much smaller?
+
+
+
+    {'(Oh!',
+     'A',
+     "A-Reelin'",
+     "A-Rollin'",
+     'Ah,',
+     'And',
+     'Ann',
+     'Ann,',
+     'Ba',
+     'Barbara',
+     'Black',
+     'Chance',
+     'Dance,',
+     'For',
+     'Got',
+     'Hand',
+     'I',
+     "I'D",
+     "Lookin'",
+     'Me',
+     'My',
+     'Oh',
+     'Oh!)',
+     "Rockin'",
+     'Romance',
+     'Saw',
+     'Sheep',
+     'So',
+     'Take',
+     'Thought',
+     'To',
+     'Went',
+     'With',
+     'You'}
+
+
+
+Ok, you may have noticed that our unique words is significantly smaller than our total list of words.  How much smaller?
 
 
 ```python
 len(unique_words)
 ```
 
+
+
+
+    34
+
+
+
 A lot.
 
-So there's a lot of repetition here.  It's time to keep track of each word and the number of occurrences of each word.
+So there's a lot of repetition in `Barbara Ann`.  It's time to keep track of each word and the number of occurrences of each word.
 
 ### Using dictionaries
 
-So we can imagine presenting this data almost as a table.  A word to the left and the number of occurrences to the right.  
+So our ultimate goal is to present our list of repetitions almost as a table, with a word to the left and the number of occurrences to the right.  
 
 | Word        | Count           |
 | ------------- |:-------------:|
@@ -296,12 +370,19 @@ In Python, this looks like a dictionary.
 word_counts =  {'Ann': 2, 'Barbara': 3, 'Ba': 8}
 ```
 
-A dictionary is a collection of key value pairs, and use them to store associated data.  Here, each word is associated with it's count. And we can use the key to access the associated value.
+A dictionary is a collection of key value pairs, and we use them to store associated data.  Here, each word is associated with it's count. And we can use the key to access the associated value.
 
 
 ```python
 word_counts['Ann']
 ```
+
+
+
+
+    2
+
+
 
 And also use the key to reassign that value.
 
@@ -315,11 +396,16 @@ word_counts['Ann'] = 33
 word_counts
 ```
 
-So that's the form we want.  How do we get there from our `list_of_lyrics` or the unique words in there?
 
-Well we can start by having our dictionary have each key be a separate word, and then set the corresponding value to zero.  Kind of like making an empty category for each of our words.  Then we would be ready to set the number for each of the words.
 
-Let's start with a dictionary that has a key for each unique word and each value starting at the number zero.  We can create a new dictionary and set the keys to `unique_words` and the values all to `0` with the `fromkeys` method.  We call this a `word_histogram`.
+
+    {'Ann': 33, 'Ba': 8, 'Barbara': 3}
+
+
+
+So that's the form we want.  How do we get there?
+
+Well we can start by having creating a dictionary with each key as a separate word, and then set the corresponding value to zero.  Kind of like allocating a region on a table for each of our words.   We do this with the `unique_words` list and the `fromkeys` method.
 
 
 ```python
@@ -369,15 +455,17 @@ word_histogram
 
 ### Loops
 
-Ok, that we have two nice data structures, a `list_of_words` to start with, and a `word_histogram` to end with, we are ready to proceed.  Remember the plan that we stated we could use to count up how many times each word appears:
+Ok, now we have two nice data structures.  A `list_of_lyrics` of all of our words, and a `word_histogram` to keep track of the amount of words.  It seems like we're making good progress.  Let's look again at our plan.
 
-* Place each of the words on a separate index card
+* Place each of the words on a separate index card. 
+    * **Complete** as `list_of_lyrics`
 * Allocate space for a small pile for each unique word
+    * **Complete** as `word_histogram`
 * Then, go through the index cards one by one
 * And for each index card, increase the size of it's related pile by one
 
 
-So we already have each of our words on a separate index card.  That is our `list_of_lyrics`.  We have also allocated space for a small pile for each unique word, that is our `word_histogram`.  So all that's left are the last two steps.
+So looking through the steps, all that's left are the last two steps.
 
 In Python to go through elements of a list one by one, we use a for loop.
 
@@ -393,26 +481,9 @@ for number in [1,2,3,4]:
     14
 
 
-Ok, so now here what we want to do is go through the elements of our `list_of_lyrics` one by one.  For each word, we want to find the related key in the dictionary and increase the value by one.  So this is what we want to do for each word: 
+Ok, so here we want to go through the elements of our `list_of_lyrics` one by one.  For each word in `list_of_lyrics`, we want to find the related key in the dictionary and increase the value by one.  So now we'll loop through each of our words instead of a list of numbers.  We'll find the related value in the dictionary, and increase it by one.
 
-
-```python
-word_histogram = dict.fromkeys(unique_words, 0)
-word = 'Barbara'
-word_histogram[word] # 0 
-# line 5 below is especially confusing, we'll cover it in detail later
-word_histogram[word]  = word_histogram[word]+ 1 
-word_histogram['Barbara'] # 1
-```
-
-
-
-
-    1
-
-
-
-Now combining this with the `for` loop we have the following.
+> **Deep breath** These next lines of code may look like magic.  The lessons that follow will explain them.
 
 
 ```python
@@ -420,6 +491,8 @@ word_histogram = dict.fromkeys(unique_words, 0)
 for word in list_of_lyrics:
     word_histogram[word]  = word_histogram[word]+ 1 
 ```
+
+> We said it would be confusing.  Good thing there's more lessons to explain it.  Let's see if it worked.
 
 
 ```python
@@ -504,13 +577,7 @@ trace = {
 plotly.offline.iplot({'data': [trace]})
 ```
 
-
-<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
-
-
-
-<div id="eaf061e3-06fe-4a0f-88ff-4bc2ab44b4ab" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("eaf061e3-06fe-4a0f-88ff-4bc2ab44b4ab", [{"type": "bar", "x": ["Barbara", "Ann"], "y": [12, 3]}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
-
+![](./first-plot.png)
 
 
 ```python
@@ -576,8 +643,8 @@ unique_words
 trace = {'type': 'bar', 'x': unique_words, 'y': list(word_histogram.values())}
 ```
 
+And now we have plotted our words. The beach saying "Ba" 25 times, and remember we only copied over some of the lyrics.  Repetitive indeed.
 
-```python
 import plotly
 from plotly.offline import iplot, init_notebook_mode
 from plotly import tools
@@ -586,23 +653,14 @@ init_notebook_mode(connected=True)
 
 trace = {'type': 'bar', 'x': list(unique_words), 'y': list(word_histogram.values())}
 plotly.offline.iplot({'data': [trace]})
-```
 
-
-<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
-
-
-
-<div id="d0ae0710-b046-4232-8654-aed4ae8383b6" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("d0ae0710-b046-4232-8654-aed4ae8383b6", [{"type": "bar", "x": ["You", "Went", "With", "Barbara", "Take", "Dance,", "Sheep", "A-Reelin'", "Oh!)", "So", "Rockin'", "Oh", "For", "Black", "Hand", "Me", "And", "Ah,", "Romance", "To", "Ba", "Ann,", "Got", "(Oh!", "Ann", "Lookin'", "A-Rollin'", "Chance", "A", "Saw", "I", "I'D", "My", "Thought"], "y": [2, 1, 1, 12, 3, 1, 1, 2, 1, 1, 4, 1, 1, 1, 2, 2, 4, 1, 1, 1, 25, 3, 2, 1, 9, 1, 2, 1, 2, 1, 1, 1, 2, 1]}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
-
-
-And now we have plotted our words. The beach saying "Ba" 25 times, and remember we only copied over some of the lyrics.  Repetitive indeed.
+![](./histogram.png)
 
 ### Summary
 
 In the first twenty lessons, we will cover these topics and more.  Hopefully, in this section you can see that even with just a bit of knowledge you can really put code to use.  It may have seemed like a lot of work, but the work was in the learning, not the code.  
 
-All of the code was just a ten lines.
+All of the code we have written so far was really just ten lines of code.
 
 
 ```python
@@ -620,6 +678,8 @@ for word in list_of_lyrics:
 
 And another 8 lines to plot.
 
+These next sections will go through each of the topics above, so that we can use the tools above to explore information with code.
+
 
 ```python
 import plotly
@@ -632,12 +692,4 @@ trace = {'type': 'bar', 'x': list(unique_words), 'y': list(word_histogram.values
 plotly.offline.iplot({'data': [trace]})
 ```
 
-
-<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
-
-
-
-<div id="5d37d4d3-5a2a-40f7-ad48-74847bc6aa77" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("5d37d4d3-5a2a-40f7-ad48-74847bc6aa77", [{"type": "bar", "x": ["You", "Went", "With", "Barbara", "Take", "Dance,", "Sheep", "A-Reelin'", "Oh!)", "So", "Rockin'", "Oh", "For", "Black", "Hand", "Me", "And", "Ah,", "Romance", "To", "Ba", "Ann,", "Got", "(Oh!", "Ann", "Lookin'", "A-Rollin'", "Chance", "A", "Saw", "I", "I'D", "My", "Thought"], "y": [2, 1, 1, 12, 3, 1, 1, 2, 1, 1, 4, 1, 1, 1, 2, 2, 4, 1, 1, 1, 25, 3, 2, 1, 9, 1, 2, 1, 2, 1, 1, 1, 2, 1]}], {}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
-
-
-These next sections will go through each of the topics above, so that we can use the tools above to answer questions with data efficiently with code.
+![](./histogram.png)

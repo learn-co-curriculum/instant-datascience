@@ -678,8 +678,6 @@ for word in list_of_lyrics:
 
 And another 8 lines to plot.
 
-These next sections will go through each of the topics above, so that we can use the tools above to explore information with code.
-
 
 ```python
 import plotly
@@ -693,3 +691,5 @@ plotly.offline.iplot({'data': [trace]})
 ```
 
 ![](./histogram.png)
+
+These next sections will go through each of the topics above, so that we can use the tools above to explore information with code.

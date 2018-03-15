@@ -74,14 +74,11 @@ To solve this problem with code, we do something similar.  We start with our wor
 "Ah, ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann Oh Barbara Ann, take my hand Barbara Ann You got me rockin' and a-rollin' Rockin' and a-reelin' Barbara Ann ba ba Ba Barbara Ann Went to a dance, lookin' for romance Saw Barbara Ann, so I thought I'd take a chance With Barbara Ann, Barbara Ann Take my hand You got me rockin' and a-rollin' (Oh! Oh!) Rockin' and a-reelin' Barbara Ann ba ba Ba ba ba ba black sheep Ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann"
 ```
 
-
-
+> What you see above in the gray box Python code.  The content in the gray box is the code you type in.  The number to the left is the line number of the code.  What you see below this is another the gray box which is the **output** of running the code.  
 
     "Ah, ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann Oh Barbara Ann, take my hand Barbara Ann You got me rockin' and a-rollin' Rockin' and a-reelin' Barbara Ann ba ba Ba Barbara Ann Went to a dance, lookin' for romance Saw Barbara Ann, so I thought I'd take a chance With Barbara Ann, Barbara Ann Take my hand You got me rockin' and a-rollin' (Oh! Oh!) Rockin' and a-reelin' Barbara Ann ba ba Ba ba ba ba black sheep Ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann"
 
-
-
-> What you see above in the gray box Python code.  The content in the gray box is the code you type in.  The number to the left is the line number of the code.  Below the gray box is the **output** of running the code.  So the output of creating a string, is just that same string - not very interesting. 
+So the output of creating a string, is just that same string - not very interesting.
 
 To create a **string** in Python, notice that we place quotes at the start and end of text.  If we don't do this, Python will give us an error.
 

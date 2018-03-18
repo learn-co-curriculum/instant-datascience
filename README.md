@@ -57,7 +57,7 @@ It keeps going, but you get the point.  Now let's say that we wanted to count up
 
 * Place each of the words on a separate index card
 * Mark a region for a pile of each unique word
-* Then, go list of index cards one by one
+* Then, go through the list of index cards one by one
 * And for each index card, find it's pile and increase the size of it's related pile by one
 
 
@@ -168,106 +168,103 @@ Ok, let's see what `list_of_lyrics` looks like.  You're about to see a lot of wo
 list_of_lyrics
 ```
 
-
-
-
-    ['Ah,',
-     'Ba',
-     'Ba',
-     'Ba',
-     'Ba',
-     'Barbara',
-     'Ann',
-     'Ba',
-     'Ba',
-     'Ba',
-     'Ba',
-     'Barbara',
-     'Ann',
-     'Oh',
-     'Barbara',
-     'Ann,',
-     'Take',
-     'My',
-     'Hand',
-     'Barbara',
-     'Ann',
-     'You',
-     'Got',
-     'Me',
-     "Rockin'",
-     'And',
-     "A-Rollin'",
-     "Rockin'",
-     'And',
-     "A-Reelin'",
-     'Barbara',
-     'Ann',
-     'Ba',
-     'Ba',
-     'Ba',
-     'Barbara',
-     'Ann',
-     'Went',
-     'To',
-     'A',
-     'Dance,',
-     "Lookin'",
-     'For',
-     'Romance',
-     'Saw',
-     'Barbara',
-     'Ann,',
-     'So',
-     'I',
-     'Thought',
-     "I'D",
-     'Take',
-     'A',
-     'Chance',
-     'With',
-     'Barbara',
-     'Ann,',
-     'Barbara',
-     'Ann',
-     'Take',
-     'My',
-     'Hand',
-     'You',
-     'Got',
-     'Me',
-     "Rockin'",
-     'And',
-     "A-Rollin'",
-     '(Oh!',
-     'Oh!)',
-     "Rockin'",
-     'And',
-     "A-Reelin'",
-     'Barbara',
-     'Ann',
-     'Ba',
-     'Ba',
-     'Ba',
-     'Ba',
-     'Ba',
-     'Ba',
-     'Black',
-     'Sheep',
-     'Ba',
-     'Ba',
-     'Ba',
-     'Ba',
-     'Barbara',
-     'Ann',
-     'Ba',
-     'Ba',
-     'Ba',
-     'Ba',
-     'Barbara',
-     'Ann']
-
-
+```python
+['Ah,',
+ 'Ba',
+ 'Ba',
+ 'Ba',
+ 'Ba',
+ 'Barbara',
+ 'Ann',
+ 'Ba',
+ 'Ba',
+ 'Ba',
+ 'Ba',
+ 'Barbara',
+ 'Ann',
+ 'Oh',
+ 'Barbara',
+ 'Ann,',
+ 'Take',
+ 'My',
+ 'Hand',
+ 'Barbara',
+ 'Ann',
+ 'You',
+ 'Got',
+ 'Me',
+ "Rockin'",
+ 'And',
+ "A-Rollin'",
+ "Rockin'",
+ 'And',
+ "A-Reelin'",
+ 'Barbara',
+ 'Ann',
+ 'Ba',
+ 'Ba',
+ 'Ba',
+ 'Barbara',
+ 'Ann',
+ 'Went',
+ 'To',
+ 'A',
+ 'Dance,',
+ "Lookin'",
+ 'For',
+ 'Romance',
+ 'Saw',
+ 'Barbara',
+ 'Ann,',
+ 'So',
+ 'I',
+ 'Thought',
+ "I'D",
+ 'Take',
+ 'A',
+ 'Chance',
+ 'With',
+ 'Barbara',
+ 'Ann,',
+ 'Barbara',
+ 'Ann',
+ 'Take',
+ 'My',
+ 'Hand',
+ 'You',
+ 'Got',
+ 'Me',
+ "Rockin'",
+ 'And',
+ "A-Rollin'",
+ '(Oh!',
+ 'Oh!)',
+ "Rockin'",
+ 'And',
+ "A-Reelin'",
+ 'Barbara',
+ 'Ann',
+ 'Ba',
+ 'Ba',
+ 'Ba',
+ 'Ba',
+ 'Ba',
+ 'Ba',
+ 'Black',
+ 'Sheep',
+ 'Ba',
+ 'Ba',
+ 'Ba',
+ 'Ba',
+ 'Barbara',
+ 'Ann',
+ 'Ba',
+ 'Ba',
+ 'Ba',
+ 'Ba',
+ 'Barbara',
+ 'Ann']
+ ```
 
 Ok, so this is a list.  It's an ordered collection, and as you can see we are now treating each word as an individual **entity**.  Each individual entity of a list is called an element.  How many elements are there in this list?
 
@@ -276,12 +273,9 @@ Ok, so this is a list.  It's an ordered collection, and as you can see we are no
 len(list_of_lyrics)
 ```
 
-
-
-
-    95
-
-
+```python
+95
+```
 
 Ok, but remember the second step of our plan was to allocate space for each unique word.  So now that we have a list of all words, let's see just the unique words.
 
@@ -290,50 +284,46 @@ Ok, but remember the second step of our plan was to allocate space for each uniq
 unique_words = set(list_of_lyrics)
 ```
 
-
 ```python
 unique_words
 ```
 
-
-
-
-    {'(Oh!',
-     'A',
-     "A-Reelin'",
-     "A-Rollin'",
-     'Ah,',
-     'And',
-     'Ann',
-     'Ann,',
-     'Ba',
-     'Barbara',
-     'Black',
-     'Chance',
-     'Dance,',
-     'For',
-     'Got',
-     'Hand',
-     'I',
-     "I'D",
-     "Lookin'",
-     'Me',
-     'My',
-     'Oh',
-     'Oh!)',
-     "Rockin'",
-     'Romance',
-     'Saw',
-     'Sheep',
-     'So',
-     'Take',
-     'Thought',
-     'To',
-     'Went',
-     'With',
-     'You'}
-
-
+```python
+set(['(Oh!',
+ 'A',
+ "A-Reelin'",
+ "A-Rollin'",
+ 'Ah,',
+ 'And',
+ 'Ann',
+ 'Ann,',
+ 'Ba',
+ 'Barbara',
+ 'Black',
+ 'Chance',
+ 'Dance,',
+ 'For',
+ 'Got',
+ 'Hand',
+ 'I',
+ "I'D",
+ "Lookin'",
+ 'Me',
+ 'My',
+ 'Oh',
+ 'Oh!)',
+ "Rockin'",
+ 'Romance',
+ 'Saw',
+ 'Sheep',
+ 'So',
+ 'Take',
+ 'Thought',
+ 'To',
+ 'Went',
+ 'With',
+ 'You'])
+```
 
 Ok, you may have noticed that our unique words is significantly smaller than our total list of words.  How much smaller?
 
@@ -342,12 +332,9 @@ Ok, you may have noticed that our unique words is significantly smaller than our
 len(unique_words)
 ```
 
-
-
-
-    34
-
-
+```python
+34
+```
 
 A lot.
 
@@ -377,12 +364,9 @@ A dictionary is a collection of key value pairs, and we use them to store associ
 word_counts['Ann']
 ```
 
-
-
-
-    2
-
-
+```python
+2
+```
 
 And also use the key to reassign that value.
 
@@ -396,11 +380,9 @@ word_counts['Ann'] = 33
 word_counts
 ```
 
-
-
-
-    {'Ann': 33, 'Ba': 8, 'Barbara': 3}
-
+```python
+{'Ann': 33, 'Ba': 8, 'Barbara': 3}
+```
 
 
 So that's the form we want.  How do we get there?
@@ -413,44 +395,42 @@ word_histogram = dict.fromkeys(unique_words, 0)
 word_histogram
 ```
 
-
-
-
-    {'(Oh!': 0,
-     'A': 0,
-     "A-Reelin'": 0,
-     "A-Rollin'": 0,
-     'Ah,': 0,
-     'And': 0,
-     'Ann': 0,
-     'Ann,': 0,
-     'Ba': 0,
-     'Barbara': 0,
-     'Black': 0,
-     'Chance': 0,
-     'Dance,': 0,
-     'For': 0,
-     'Got': 0,
-     'Hand': 0,
-     'I': 0,
-     "I'D": 0,
-     "Lookin'": 0,
-     'Me': 0,
-     'My': 0,
-     'Oh': 0,
-     'Oh!)': 0,
-     "Rockin'": 0,
-     'Romance': 0,
-     'Saw': 0,
-     'Sheep': 0,
-     'So': 0,
-     'Take': 0,
-     'Thought': 0,
-     'To': 0,
-     'Went': 0,
-     'With': 0,
-     'You': 0}
-
+```python
+{'(Oh!': 0,
+ 'A': 0,
+ "A-Reelin'": 0,
+ "A-Rollin'": 0,
+ 'Ah,': 0,
+ 'And': 0,
+ 'Ann': 0,
+ 'Ann,': 0,
+ 'Ba': 0,
+ 'Barbara': 0,
+ 'Black': 0,
+ 'Chance': 0,
+ 'Dance,': 0,
+ 'For': 0,
+ 'Got': 0,
+ 'Hand': 0,
+ 'I': 0,
+ "I'D": 0,
+ "Lookin'": 0,
+ 'Me': 0,
+ 'My': 0,
+ 'Oh': 0,
+ 'Oh!)': 0,
+ "Rockin'": 0,
+ 'Romance': 0,
+ 'Saw': 0,
+ 'Sheep': 0,
+ 'So': 0,
+ 'Take': 0,
+ 'Thought': 0,
+ 'To': 0,
+ 'Went': 0,
+ 'With': 0,
+ 'You': 0}
+```
 
 
 ### Loops
@@ -475,11 +455,12 @@ for number in [1,2,3,4]:
     print(number + 10)
 ```
 
-    11
-    12
-    13
-    14
-
+```python
+11
+12
+13
+14
+```
 
 Ok, so here we want to go through the elements of our `list_of_lyrics` one by one.  For each word in `list_of_lyrics`, we want to find the related key in the dictionary and increase the value by one.  So now we'll loop through each of our words instead of a list of numbers.  We'll find the related value in the dictionary, and increase it by one.
 
@@ -499,45 +480,42 @@ for word in list_of_lyrics:
 word_histogram
 ```
 
-
-
-
-    {'(Oh!': 1,
-     'A': 2,
-     "A-Reelin'": 2,
-     "A-Rollin'": 2,
-     'Ah,': 1,
-     'And': 4,
-     'Ann': 9,
-     'Ann,': 3,
-     'Ba': 25,
-     'Barbara': 12,
-     'Black': 1,
-     'Chance': 1,
-     'Dance,': 1,
-     'For': 1,
-     'Got': 2,
-     'Hand': 2,
-     'I': 1,
-     "I'D": 1,
-     "Lookin'": 1,
-     'Me': 2,
-     'My': 2,
-     'Oh': 1,
-     'Oh!)': 1,
-     "Rockin'": 4,
-     'Romance': 1,
-     'Saw': 1,
-     'Sheep': 1,
-     'So': 1,
-     'Take': 3,
-     'Thought': 1,
-     'To': 1,
-     'Went': 1,
-     'With': 1,
-     'You': 2}
-
-
+```python
+{'(Oh!': 1,
+ 'A': 2,
+ "A-Reelin'": 2,
+ "A-Rollin'": 2,
+ 'Ah,': 1,
+ 'And': 4,
+ 'Ann': 9,
+ 'Ann,': 3,
+ 'Ba': 25,
+ 'Barbara': 12,
+ 'Black': 1,
+ 'Chance': 1,
+ 'Dance,': 1,
+ 'For': 1,
+ 'Got': 2,
+ 'Hand': 2,
+ 'I': 1,
+ "I'D": 1,
+ "Lookin'": 1,
+ 'Me': 2,
+ 'My': 2,
+ 'Oh': 1,
+ 'Oh!)': 1,
+ "Rockin'": 4,
+ 'Romance': 1,
+ 'Saw': 1,
+ 'Sheep': 1,
+ 'So': 1,
+ 'Take': 3,
+ 'Thought': 1,
+ 'To': 1,
+ 'Went': 1,
+ 'With': 1,
+ 'You': 2}
+```
 
 Ok, that's it.  If we want to see how many time 'Rockin' appears, we easily can.
 
@@ -584,12 +562,9 @@ plotly.offline.iplot({'data': [trace]})
 trace
 ```
 
-
-
-
-    {'type': 'bar', 'x': ['Barbara', 'Ann'], 'y': [12, 3]}
-
-
+```python
+{'type': 'bar', 'x': ['Barbara', 'Ann'], 'y': [12, 3]}
+```
 
 You can see that x values  point to an array of the x values, our list of words, and `y` points to an array of y values, the number of times each word appears.  So lets set `x` and `y` equal to those values.
 
@@ -598,46 +573,42 @@ You can see that x values  point to an array of the x values, our list of words,
 unique_words
 ```
 
-
-
-
-    {'(Oh!',
-     'A',
-     "A-Reelin'",
-     "A-Rollin'",
-     'Ah,',
-     'And',
-     'Ann',
-     'Ann,',
-     'Ba',
-     'Barbara',
-     'Black',
-     'Chance',
-     'Dance,',
-     'For',
-     'Got',
-     'Hand',
-     'I',
-     "I'D",
-     "Lookin'",
-     'Me',
-     'My',
-     'Oh',
-     'Oh!)',
-     "Rockin'",
-     'Romance',
-     'Saw',
-     'Sheep',
-     'So',
-     'Take',
-     'Thought',
-     'To',
-     'Went',
-     'With',
-     'You'}
-
-
-
+```python
+{'(Oh!',
+ 'A',
+ "A-Reelin'",
+ "A-Rollin'",
+ 'Ah,',
+ 'And',
+ 'Ann',
+ 'Ann,',
+ 'Ba',
+ 'Barbara',
+ 'Black',
+ 'Chance',
+ 'Dance,',
+ 'For',
+ 'Got',
+ 'Hand',
+ 'I',
+ "I'D",
+ "Lookin'",
+ 'Me',
+ 'My',
+ 'Oh',
+ 'Oh!)',
+ "Rockin'",
+ 'Romance',
+ 'Saw',
+ 'Sheep',
+ 'So',
+ 'Take',
+ 'Thought',
+ 'To',
+ 'Went',
+ 'With',
+ 'You'}
+```
 
 ```python
 trace = {'type': 'bar', 'x': unique_words, 'y': list(word_histogram.values())}
@@ -645,6 +616,7 @@ trace = {'type': 'bar', 'x': unique_words, 'y': list(word_histogram.values())}
 
 And now we have plotted our words. The beach saying "Ba" 25 times, and remember we only copied over some of the lyrics.  Repetitive indeed.
 
+```python
 import plotly
 from plotly.offline import iplot, init_notebook_mode
 from plotly import tools
@@ -653,6 +625,7 @@ init_notebook_mode(connected=True)
 
 trace = {'type': 'bar', 'x': list(unique_words), 'y': list(word_histogram.values())}
 plotly.offline.iplot({'data': [trace]})
+```
 
 ![histogram](./histogram.png)
 
@@ -661,7 +634,6 @@ plotly.offline.iplot({'data': [trace]})
 In the first twenty lessons, we will cover these topics and more.  Hopefully, in this section you can see that even with just a bit of knowledge you can really put code to use.  It may have seemed like a lot of work, but the work was in the learning, not the code.  
 
 All of the code we have written so far was really just ten lines of code.
-
 
 ```python
 lyrics = "Ah, ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann Oh Barbara Ann, take my hand Barbara Ann You got me rockin' and a-rollin' Rockin' and a-reelin' Barbara Ann ba ba Ba Barbara Ann Went to a dance, lookin' for romance Saw Barbara Ann, so I thought I'd take a chance With Barbara Ann, Barbara Ann Take my hand You got me rockin' and a-rollin' (Oh! Oh!) Rockin' and a-reelin' Barbara Ann ba ba Ba ba ba ba black sheep Ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann"
@@ -677,7 +649,6 @@ for word in list_of_lyrics:
 ```
 
 And another 8 lines to plot.
-
 
 ```python
 import plotly

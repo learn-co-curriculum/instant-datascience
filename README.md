@@ -20,13 +20,13 @@ What makes a hit record?  Does repetitiveness help?  And is our music getting mo
 
 Here is a chart that Colin Morris produced showing some of the most repetitive popular artists.  How was something like this made and calculated?
 
-![](./song-chart.png)
+![song chart](./song-chart.png)
 
 ### Analyzing one song
 
 Let's take the song Barbara Ann, the most repetitive song of the Beach Boys, and remastered by the cast of Saved by the Bell in 1990.  
 
-![](./saved-by-bell.gif)
+![saved by the bell gif](./saved-by-bell.gif)
 
 How did the cast learn all of the words so easily?  Repetition. Here are the some of the lyrics.
 
@@ -61,7 +61,7 @@ It keeps going, but you get the point.  Now let's say that we wanted to count up
 * And for each index card, find it's pile and increase the size of it's related pile by one
 
 
-![](./index-cards.png)
+![index cards](./index-cards.png)
 
 Let's call these steps above **our plan**.  Now that we have a plan, let's translate this into code.
 
@@ -654,7 +654,7 @@ init_notebook_mode(connected=True)
 trace = {'type': 'bar', 'x': list(unique_words), 'y': list(word_histogram.values())}
 plotly.offline.iplot({'data': [trace]})
 
-![](./histogram.png)
+![histogram](./histogram.png)
 
 ### Summary
 
@@ -690,6 +690,6 @@ trace = {'type': 'bar', 'x': list(unique_words), 'y': list(word_histogram.values
 plotly.offline.iplot({'data': [trace]})
 ```
 
-![](./histogram.png)
+![histogram](./histogram.png)
 
 These next sections will go through each of the topics above, so that we can use the tools above to explore information with code.

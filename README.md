@@ -1,9 +1,9 @@
 
 # Instant Data Science
 
-When starting any course, you likely look at the syllabus to see what's covered and answer can you do it.  In this lesson, we'll hope to give you a sense of how with just a little bit of knowledge you can make some real progress in using programs to answer questions with data.  
+When starting any course, you likely look at the syllabus to see what's covered and answer can you do it.  In this lesson, we'll hope to give you a sense of how, with just a little bit of knowledge, you can make some real progress in using programs to answer questions with data.  
 
-To do so, we'll have lessons and labs on the following topics: 
+To do so, we will be introducing the following topics: 
 * Data types: working with text and data 
 * Variables: storing data
 * Lists: working with data in an ordered collection
@@ -12,7 +12,7 @@ To do so, we'll have lessons and labs on the following topics:
 * Data visualization: using plots to display data
 * Functions: defining and running specific procedures in code 
 
-So this set of lessons will go into these topics, with lessons and labs on each. Then, we will break down the content down step by step.  But this lesson is about instant data science.  So explore that in these first topics.
+The above set of topics will be covered with lessons and labs on each. Then, we will break down the content step by step.  This lesson, however, is about instant data science.  So explore that in these first topics.
 
 ### Song Analysis
 
@@ -20,13 +20,13 @@ What makes a hit record?  Does repetitiveness help?  And is our music getting mo
 
 Here is a chart that Colin Morris produced showing some of the most repetitive popular artists.  How was something like this made and calculated?
 
-![song chart](./song-chart.png)
+![](./song-chart.png)
 
 ### Analyzing one song
 
 Let's take the song Barbara Ann, the most repetitive song of the Beach Boys, and remastered by the cast of Saved by the Bell in 1990.  
 
-![saved by the bell gif](./saved-by-bell.gif)
+![](./saved-by-bell.gif)
 
 How did the cast learn all of the words so easily?  Repetition. Here are the some of the lyrics.
 
@@ -61,7 +61,7 @@ It keeps going, but you get the point.  Now let's say that we wanted to count up
 * And for each index card, find it's pile and increase the size of it's related pile by one
 
 
-![index cards](./index-cards.png)
+![](./index-cards.png)
 
 Let's call these steps above **our plan**.  Now that we have a plan, let's translate this into code.
 
@@ -81,7 +81,7 @@ To solve this problem with code, we do something similar.  We start with our wor
 
 
 
-> What you see above in the gray box Python code.  The content in the gray box is the code you type in.  The number to the left is the line number of the code.  Below the gray box is the **output** of running the code.  So the output of creating a string, is just that same string - not very interesting. 
+> What you see above in the gray box is Python code.  The content in the gray box is the code you type in.  The number to the left is the line number of the code.  Below the gray box is the **output** of running the code.  So the output of creating a string, is just that same string - not very interesting. 
 
 To create a **string** in Python, notice that we place quotes at the start and end of text.  If we don't do this, Python will give us an error.
 
@@ -91,7 +91,7 @@ Ah, ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann Oh Barbara Ann, take my hand
 ```
 
 
-      File "<ipython-input-5-5fbb40878925>", line 1
+      File "<ipython-input-30-44af718de734>", line 1
         Ah, ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann Oh Barbara Ann, take my hand Barbara Ann You got me rockin' and a-rollin' Rockin' and a-reelin' Barbara Ann ba ba Ba Barbara Ann Went to a dance, lookin' for romance Saw Barbara Ann, so I thought I'd take a chance With Barbara Ann, Barbara Ann Take my hand You got me rockin' and a-rollin' (Oh! Oh!) Rockin' and a-reelin' Barbara Ann ba ba Ba ba ba ba black sheep Ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann
                 ^
     SyntaxError: invalid syntax
@@ -405,7 +405,7 @@ word_counts
 
 So that's the form we want.  How do we get there?
 
-Well we can start by having creating a dictionary with each key as a separate word, and then set the corresponding value to zero.  Kind of like allocating a region on a table for each of our words.   We do this with the `unique_words` list and the `fromkeys` method.
+Well we start by creating a dictionary with each key as a separate word, and then set the corresponding value to zero.  Kind of like allocating a region on a table for each of our words.   We do this with the `unique_words` list and the `fromkeys` method.
 
 
 ```python
@@ -481,7 +481,7 @@ for number in [1,2,3,4]:
     14
 
 
-Ok, so here we want to go through the elements of our `list_of_lyrics` one by one.  For each word in `list_of_lyrics`, we want to find the related key in the dictionary and increase the value by one.  So now we'll loop through each of our words instead of a list of numbers.  We'll find the related value in the dictionary, and increase it by one.
+Ok, so here we want to go through the elements of our `list_of_lyrics` one by one. For each word in `list_of_lyrics`, we want to find the related key in the dictionary, `word_histogram`, and increase the value by one. So now, instead of looping through a list of numbers, we will loop through each of our words in `list_of_lyrics`, find the related value in the dictionary, and increase it by one.
 
 > **Deep breath** These next lines of code may look like magic.  The lessons that follow will explain them.
 
@@ -489,7 +489,7 @@ Ok, so here we want to go through the elements of our `list_of_lyrics` one by on
 ```python
 word_histogram = dict.fromkeys(unique_words, 0)
 for word in list_of_lyrics:
-    word_histogram[word]  = word_histogram[word]+ 1 
+    word_histogram[word] = word_histogram[word]+ 1 
 ```
 
 > We said it would be confusing.  Good thing there's more lessons to explain it.  Let's see if it worked.
@@ -539,7 +539,7 @@ word_histogram
 
 
 
-Ok, that's it.  If we want to see how many time 'Rockin' appears, we easily can.
+Ok, that's it.  Now if we want to see how many times 'Rockin' appears, we can do so easily.
 
 
 ```python
@@ -576,6 +576,10 @@ trace = {
  'y': [12, 3]}
 plotly.offline.iplot({'data': [trace]})
 ```
+
+
+<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
+
 
 ![](./first-plot.png)
 
@@ -640,27 +644,35 @@ unique_words
 
 
 ```python
-trace = {'type': 'bar', 'x': unique_words, 'y': list(word_histogram.values())}
-```
-
-And now we have plotted our words. The beach saying "Ba" 25 times, and remember we only copied over some of the lyrics.  Repetitive indeed.
-
 import plotly
 from plotly.offline import iplot, init_notebook_mode
 from plotly import tools
 import plotly.graph_objs as go
 init_notebook_mode(connected=True)
 
-trace = {'type': 'bar', 'x': list(unique_words), 'y': list(word_histogram.values())}
-plotly.offline.iplot({'data': [trace]})
 
-![histogram](./histogram.png)
+trace = {
+    'type': 'bar', 
+    'x': list(unique_words), 
+    'y': list(word_histogram.values())
+    }
+
+plotly.offline.iplot({'data': [trace]})
+```
+
+
+<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
+
+
+![](./histogram.png)
+
+And now we have plotted our words. The Beach Boys saying "Ba" 25 times, and remember we only copied over some of the lyrics.  Repetitive indeed.
 
 ### Summary
 
 In the first twenty lessons, we will cover these topics and more.  Hopefully, in this section you can see that even with just a bit of knowledge you can really put code to use.  It may have seemed like a lot of work, but the work was in the learning, not the code.  
 
-All of the code we have written so far was really just ten lines of code.
+All of the code written so far was really just ten lines of code.
 
 
 ```python
@@ -690,6 +702,10 @@ trace = {'type': 'bar', 'x': list(unique_words), 'y': list(word_histogram.values
 plotly.offline.iplot({'data': [trace]})
 ```
 
-![histogram](./histogram.png)
+
+<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
+
+
+![](./histogram.png)
 
 These next sections will go through each of the topics above, so that we can use the tools above to explore information with code.

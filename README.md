@@ -1,7 +1,7 @@
 
 # Instant Data Science
 
-When starting any course, you likely look at the syllabus to see what's covered and answer can you do it.  In this lesson, we'll hope to give you a sense of how with just a little bit of knowledge you can make some real progress in using programs to answer questions with data.  
+When starting any course, you likely look at the syllabus to see what's covered and ask yourself if you can do it.  In this lesson, we'll give you a sense of how, with just a little bit of knowledge, you can make some real progress in using programs to answer questions with data.  
 
 To do so, we'll have lessons and labs on the following topics: 
 * Data types: working with text and data 
@@ -12,11 +12,11 @@ To do so, we'll have lessons and labs on the following topics:
 * Data visualization: using plots to display data
 * Functions: defining and running specific procedures in code 
 
-So this set of lessons will go into these topics, with lessons and labs on each. Then, we will break down the content down step by step.  But this lesson is about instant data science.  So explore that in these first topics.
+This set of lessons will go into these topics, with lessons and labs on each. Then, we will break down the content step by step.  But this lesson is about instant data science.  So we will explore that in these first topics.
 
 ### Song Analysis
 
-What makes a hit record?  Does repetitiveness help?  And is our music getting more repetitive over time?  Questions like these were asked by the great computer scientist Donald Knuth in 1977, and were reasked and answered, by Colin Morris in [this article](https://pudding.cool/2017/05/song-repetition/).
+What makes a hit record?  Does repetitiveness help?  And is our music getting more repetitive over time?  Questions like these were asked by the great computer scientist Donald Knuth in 1977, and were reasked and answered by Colin Morris in [this article](https://pudding.cool/2017/05/song-repetition/).
 
 Here is a chart that Colin Morris produced showing some of the most repetitive popular artists.  How was something like this made and calculated?
 
@@ -24,7 +24,7 @@ Here is a chart that Colin Morris produced showing some of the most repetitive p
 
 ### Analyzing one song
 
-Let's take the song Barbara Ann, the most repetitive song of the Beach Boys, and remastered by the cast of Saved by the Bell in 1990.  
+Let's take the song *Barbara Ann*, the most repetitive song of the Beach Boys which was remastered by the cast of *Saved by the Bell* in 1990.  
 
 ![saved by the bell gif](./saved-by-bell.gif)
 
@@ -57,8 +57,8 @@ It keeps going, but you get the point.  Now let's say that we wanted to count up
 
 * Place each of the words on a separate index card
 * Mark a region for a pile of each unique word
-* Then, go list of index cards one by one
-* And for each index card, find it's pile and increase the size of it's related pile by one
+* Then, go through the list of index cards one by one
+* For each index card, find its pile and increase the size of its related pile by one
 
 
 ![index cards](./index-cards.png)
@@ -81,7 +81,7 @@ To solve this problem with code, we do something similar.  We start with our wor
 
 
 
-> What you see above in the gray box Python code.  The content in the gray box is the code you type in.  The number to the left is the line number of the code.  Below the gray box is the **output** of running the code.  So the output of creating a string, is just that same string - not very interesting. 
+> What you see above in the gray box Python code.  The content in the gray box is the code you type in.  The number to the left is the line number of the code.  Below the gray box is the **output** of running the code.  So the output of creating a string is just that same string - not very interesting. 
 
 To create a **string** in Python, notice that we place quotes at the start and end of text.  If we don't do this, Python will give us an error.
 
@@ -98,9 +98,9 @@ Ah, ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann Oh Barbara Ann, take my hand
 
 
 
-> So notice the output of the code in the gray box is an error - more interesting.  But let's move on.
+> Notice the output of the code in the gray box is an error - more interesting.  But let's move on.
 
-Ok, so we need the quotes for a string, but to hold onto this string and reference it later, we assign it to a variable.  
+Ok, so we need the quotes for a string, but to hold on to this string and reference it later, we assign it to a variable.  
 
 
 ```python
@@ -121,7 +121,7 @@ lyrics
 
 
 
-Ok, so strings are great for performing operations on text. For example we can call a method `title` on a string to capitaize the first letter of each word.
+Ok, so strings are great for performing operations on text. For example, we can call a method `title` on a string to capitaize the first letter of each word.
 
 
 ```python
@@ -150,11 +150,11 @@ titled_lyrics
 
 
 
-Not bad at all.  Strings are great at manipulating all of our text at once.  However, if you remember **our plan**, the first step was to place each word on a separate index card.  But strings **are not** good at separating our text into individual words.  For that we need a new data structure called a **list**.
+Not bad at all.  Strings are great at manipulating all of our text at once.  However, if you remember **our plan**, the first step was to place each word on a separate index card.  But strings are **not** good at separating our text into individual words.  For that, we need a new data structure called a **list**.
 
 ### Lists
 
-To separate our string into a individual words, we need to change this continuous string into a list.  Here is how we tell the computer to do this: split the string into a different entity every time you see a space.  Here are those directions in code.
+To separate our string into individual words, we need to change this continuous string into a list.  Here is how we tell the computer to do this: split the string into a different entity every time you see a space.  Here are those directions in code.
 
 
 ```python
@@ -335,7 +335,7 @@ unique_words
 
 
 
-Ok, you may have noticed that our unique words is significantly smaller than our total list of words.  How much smaller?
+Ok, you may have noticed that our list of unique words is significantly smaller than our total list of words.  How much smaller?
 
 
 ```python
@@ -355,7 +355,7 @@ So there's a lot of repetition in `Barbara Ann`.  It's time to keep track of eac
 
 ### Using dictionaries
 
-So our ultimate goal is to present our list of repetitions almost as a table, with a word to the left and the number of occurrences to the right.  
+Our ultimate goal is to present our list of repetitions almost as a table, with a word to the left and the number of occurrences to the right.  
 
 | Word        | Count           |
 | ------------- |:-------------:|
@@ -370,7 +370,7 @@ In Python, this looks like a dictionary.
 word_counts =  {'Ann': 2, 'Barbara': 3, 'Ba': 8}
 ```
 
-A dictionary is a collection of key value pairs, and we use them to store associated data.  Here, each word is associated with it's count. And we can use the key to access the associated value.
+A dictionary is a collection of key-value pairs, and we use them to store associated data.  Here, each word is associated with its count. And we can use the key to access the associated value.
 
 
 ```python
@@ -405,7 +405,7 @@ word_counts
 
 So that's the form we want.  How do we get there?
 
-Well we can start by having creating a dictionary with each key as a separate word, and then set the corresponding value to zero.  Kind of like allocating a region on a table for each of our words.   We do this with the `unique_words` list and the `fromkeys` method.
+Well, we can start by creating a dictionary with each key as a separate word, and then set the corresponding value to zero.  Kind of like allocating a region on a table for each of our words.  We do this with the `unique_words` list and the `fromkeys` method.
 
 
 ```python
@@ -455,19 +455,19 @@ word_histogram
 
 ### Loops
 
-Ok, now we have two nice data structures.  A `list_of_lyrics` of all of our words, and a `word_histogram` to keep track of the amount of words.  It seems like we're making good progress.  Let's look again at our plan.
+Ok, now we have two nice data structures.  A `list_of_lyrics` of all of our words, and a `word_histogram` to keep track of the number of words.  It seems like we're making good progress.  Let's look again at our plan.
 
 * Place each of the words on a separate index card. 
     * **Complete** as `list_of_lyrics`
 * Allocate space for a small pile for each unique word
     * **Complete** as `word_histogram`
 * Then, go through the index cards one by one
-* And for each index card, increase the size of it's related pile by one
+* For each index card, increase the size of its related pile by one
 
 
 So looking through the steps, all that's left are the last two steps.
 
-In Python to go through elements of a list one by one, we use a for loop.
+In Python, to go through elements of a list one by one, we use a `for` loop.
 
 
 ```python
@@ -481,7 +481,7 @@ for number in [1,2,3,4]:
     14
 
 
-Ok, so here we want to go through the elements of our `list_of_lyrics` one by one.  For each word in `list_of_lyrics`, we want to find the related key in the dictionary and increase the value by one.  So now we'll loop through each of our words instead of a list of numbers.  We'll find the related value in the dictionary, and increase it by one.
+Ok, so here we want to go through the elements of our `list_of_lyrics` one by one.  For each word in `list_of_lyrics`, we want to find the related key in the dictionary and increase the value by one.  So now, we'll loop through each of our words instead of a list of numbers.  We'll find the related value in the dictionary, and increase it by one.
 
 > **Deep breath** These next lines of code may look like magic.  The lessons that follow will explain them.
 
@@ -492,7 +492,7 @@ for word in list_of_lyrics:
     word_histogram[word]  = word_histogram[word]+ 1 
 ```
 
-> We said it would be confusing.  Good thing there's more lessons to explain it.  Let's see if it worked.
+> We said it would be confusing.  Good thing there are more lessons to explain it.  Let's see if it worked.
 
 
 ```python
@@ -591,7 +591,7 @@ trace
 
 
 
-You can see that x values  point to an array of the x values, our list of words, and `y` points to an array of y values, the number of times each word appears.  So lets set `x` and `y` equal to those values.
+You can see that x values  point to an array of the x values, our list of words, and `y` points to an array of y values, the number of times each word appears.  So let's set `x` and `y` equal to those values.
 
 
 ```python
@@ -645,6 +645,7 @@ trace = {'type': 'bar', 'x': unique_words, 'y': list(word_histogram.values())}
 
 And now we have plotted our words. The beach saying "Ba" 25 times, and remember we only copied over some of the lyrics.  Repetitive indeed.
 
+```python
 import plotly
 from plotly.offline import iplot, init_notebook_mode
 from plotly import tools
@@ -653,6 +654,7 @@ init_notebook_mode(connected=True)
 
 trace = {'type': 'bar', 'x': list(unique_words), 'y': list(word_histogram.values())}
 plotly.offline.iplot({'data': [trace]})
+```
 
 ![histogram](./histogram.png)
 

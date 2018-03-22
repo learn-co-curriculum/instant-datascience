@@ -28,7 +28,7 @@ Let's take the song Barbara Ann, the most repetitive song of the Beach Boys, and
 
 ![](./saved-by-bell.gif)
 
-How did the cast learn all of the words so easily?  Repetition. Here are the some of the lyrics.
+How did the cast learn all of the words so easily?  Repetition. Here are some of the lyrics.
 
     Ah, ba ba ba ba Barbara Ann
     Ba ba ba ba Barbara Ann
@@ -56,9 +56,9 @@ How did the cast learn all of the words so easily?  Repetition. Here are the som
 It keeps going, but you get the point.  Now let's say that we wanted to count up how many times each word in the above selection appears.  Without a computer, we could do the following: 
 
 * Place each of the words on a separate index card
-* Mark a region for a pile of each unique word
-* Then, go list of index cards one by one
-* And for each index card, find it's pile and increase the size of it's related pile by one
+* Mark a space for every unique word to make a pile of cards with that word
+* Then, iterate through the index cards one by one
+* Finally, for each index card, find its pile and increase the size by one
 
 
 ![](./index-cards.png)
@@ -121,7 +121,7 @@ lyrics
 
 
 
-Ok, so strings are great for performing operations on text. For example we can call a method `title` on a string to capitaize the first letter of each word.
+Ok, so strings are great for performing operations on text. For example we can call a method `title` on a string to capitalize the first letter of each word.
 
 
 ```python
@@ -370,7 +370,7 @@ In Python, this looks like a dictionary.
 word_counts =  {'Ann': 2, 'Barbara': 3, 'Ba': 8}
 ```
 
-A dictionary is a collection of key value pairs, and we use them to store associated data.  Here, each word is associated with it's count. And we can use the key to access the associated value.
+A dictionary is a collection of key value pairs, and we use them to store associated data.  Here, each word is associated with its count. And we can use the key to access the associated value.
 
 
 ```python
@@ -405,7 +405,7 @@ word_counts
 
 So that's the form we want.  How do we get there?
 
-Well we start by creating a dictionary with each key as a separate word, and then set the corresponding value to zero.  Kind of like allocating a region on a table for each of our words.   We do this with the `unique_words` list and the `fromkeys` method.
+Well we start by creating a dictionary with each key as a separate word, and then set the corresponding value to zero.  Kind of like allocating a region on a table for each of our words.  We do this with the `unique_words` list and the `fromkeys` method, whose second argument is the value we set for each key.
 
 
 ```python
@@ -462,7 +462,7 @@ Ok, now we have two nice data structures.  A `list_of_lyrics` of all of our word
 * Allocate space for a small pile for each unique word
     * **Complete** as `word_histogram`
 * Then, go through the index cards one by one
-* And for each index card, increase the size of it's related pile by one
+* And for each index card, increase the size of its related pile by one
 
 
 So looking through the steps, all that's left are the last two steps.

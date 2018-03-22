@@ -81,7 +81,7 @@ To solve this problem with code, we do something similar.  We start with our wor
 
 
 
-> What you see above in the gray box is Python code.  The content in the gray box is the code you type in.  The number to the left is the line number of the code.  Below the gray box is the **output** of running the code.  So the output of creating a string, is just that same string - not very interesting. 
+> What you see above in the first gray box is Python code.  The content in the this box is the code you input.  The number to the left is the line number of the code. What comes below this first box is the **output** of running the code.  So the output of creating a string, is just that same string - not very interesting. 
 
 To create a **string** in Python, notice that we place quotes at the start and end of text.  If we don't do this, Python will give us an error.
 

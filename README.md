@@ -12,7 +12,7 @@ To do so, we will be introducing the following topics:
 * Data visualization: using plots to display data
 * Functions: defining and running specific procedures in code 
 
-The above set of topics will be covered with lessons and labs on each. Then, we will break down the content step by step.  This lesson, however, is about instant data science.  So explore that in these first topics.
+This lesson, will offer a brief glimpse into each of these topics.  In the rest of the course, we will provide lessons and labs on each of these topics to break down the material step by step.  
 
 ### Song Analysis
 
@@ -56,12 +56,10 @@ How did the cast learn all of the words so easily?  Repetition. Here are some of
 It keeps going, but you get the point.  Now let's say that we wanted to count up how many times each word in the above selection appears.  Without a computer, we could do the following: 
 
 * Place each of the words on a separate index card
-* Mark a space for every unique word to make a pile of cards with that word
-* Then, iterate through the index cards one by one
-* Finally, for each index card, find its pile and increase the size by one
+* Designate a spot for each unique word in our index cards
+* Then, flip through the index cards one by one
+* While flipping through each index card, find its designated pile and increase the size by one
 
-
-![](./index-cards.png)
 
 Let's call these steps above **our plan**.  Now that we have a plan, let's translate this into code.
 
@@ -81,7 +79,7 @@ To solve this problem with code, we do something similar.  We start with our wor
 
 
 
-> What you see above in the first gray box is Python code.  The content in the this box is the code you input.  The number to the left is the line number of the code. What comes below this first box is the **output** of running the code.  So the output of creating a string, is just that same string - not very interesting. 
+> What you see above in the first gray box is Python code.  The content in this box is the code you would write.  What comes below this first box is the **output** of running the code.  So the output of creating a string, is just that same string - not very interesting. 
 
 To create a **string** in Python, notice that we place quotes at the start and end of text.  If we don't do this, Python will give us an error.
 

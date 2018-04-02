@@ -20,13 +20,13 @@ What makes a hit record?  Does repetitiveness help?  And is our music getting mo
 
 Here is a chart that Colin Morris produced showing some of the most repetitive popular artists.  How was something like this made and calculated?
 
-![](./song-chart.png)
+![](https://learn-verified.s3.amazonaws.com/data-science-assets/song-chart.png)
 
 ### Analyzing one song
 
 Let's take the song Barbara Ann, the most repetitive song of the Beach Boys, and remastered by the cast of Saved by the Bell in 1990.  
 
-![](./saved-by-bell.gif)
+![](https://learn-verified.s3.amazonaws.com/data-science-assets/saved-by-bell.gif)
 
 How did the cast learn all of the words so easily?  Repetition. Here are some of the lyrics.
 
@@ -579,7 +579,7 @@ plotly.offline.iplot({'data': [trace]})
 <script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
 
 
-![](./first-plot.png)
+![](https://learn-verified.s3.amazonaws.com/data-science-assets/first-plot.png)
 
 
 ```python
@@ -662,7 +662,7 @@ plotly.offline.iplot({'data': [trace]})
 <script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
 
 
-![](./histogram.png)
+![](https://learn-verified.s3.amazonaws.com/data-science-assets/histogram.png)
 
 And now we have plotted our words. The Beach Boys saying "Ba" 25 times, and remember we only copied over some of the lyrics.  Repetitive indeed.
 

@@ -544,6 +544,13 @@ Ok, that's it.  Now if we want to see how many times 'Rockin' appears, we can do
 word_histogram["Rockin'"]
 ```
 
+
+
+
+    4
+
+
+
 ### Visualizing the data
 
 We've got our answer in code.  The final step is to turn it into a chart.  We'll use a library -- which is a collection of code we get from the Internet that does not come with Python -- called Plotly to make our charts. 
@@ -568,12 +575,23 @@ trace = {
 plotly.offline.iplot({'data': [trace]})
 ```
 
+
+<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
+
+
 ![](https://learn-verified.s3.amazonaws.com/data-science-assets/first-plot.png)
 
 
 ```python
 trace
 ```
+
+
+
+
+    {'type': 'bar', 'x': ['Barbara', 'Ann'], 'y': [12, 3]}
+
+
 
 Above you can see that `x` points to an array of the x values, our list of words, and `y` points to an array of y values, the number of times each word appears. So, let's then set `x` and `y` equal to our `unique_words` and the amount of times those words appear:
 
@@ -594,6 +612,10 @@ trace = {
 
 plotly.offline.iplot({'data': [trace]})
 ```
+
+
+<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
+
 
 ![](https://learn-verified.s3.amazonaws.com/data-science-assets/histogram.png)
 
@@ -630,8 +652,12 @@ import plotly.graph_objs as go
 init_notebook_mode(connected=True)
 
 trace = {'type': 'bar', 'x': list(unique_words), 'y': list(word_histogram.values())}
-
+plotly.offline.iplot({'data': [trace]})
 ```
+
+
+<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
+
 
 ![](https://learn-verified.s3.amazonaws.com/data-science-assets/histogram.png)
 

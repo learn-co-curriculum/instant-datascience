@@ -3,14 +3,14 @@
 
 When starting any course, you likely look at the syllabus to see what's covered and ask yourself if you can do it. In this lesson, we'll hope to give you a sense of how, with just a little bit of knowledge, you can make some real progress in using programs to answer questions with data.  
 
-To do so, we will be introducing the following topics: 
-* Data types: working with text and data 
+To do so, we will be introducing the following topics:
+* Data types: working with text and data
 * Variables: storing data
 * Lists: working with data in an ordered collection
 * Dictionaries: representing data as a collection of attributes   
 * Loops and iteration: repeating a sequence of instructions  
 * Data visualization: using plots to display data
-* Functions: defining and running specific procedures in code 
+* Functions: defining and running specific procedures in code
 
 This lesson will offer a brief glimpse into each of these topics.  In the rest of the course, we will provide lessons and labs on each of these topics to break down the material step by step.  
 
@@ -53,7 +53,7 @@ How did the cast learn all of the words so easily?  Repetition. Here are some of
     Ba ba ba ba Barbara Ann
     Ba ba ba ba Barbara Ann
 
-It keeps going, but you get the point.  Now let's say that we wanted to count up how many times each word in the above selection appears.  Without a computer, we could do the following: 
+It keeps going, but you get the point.  Now let's say that we wanted to count up how many times each word in the above selection appears.  Without a computer, we could do the following:
 
 * Place each of the words on a separate index card
 * Designate a spot for each unique word in our index cards
@@ -79,7 +79,7 @@ To solve this problem with code, we do something similar.  We start with our wor
 
 
 
-> **Note:** What you see above in the first gray box is Python code.  The content in this box is the code you would write.  What comes below this first box is the **output** of running the code.  So the output of creating a string, is just that same string - not very interesting. 
+> **Note:** What you see above in the first gray box is Python code.  The content in this box is the code you would write.  What comes below this first box is the **output** of running the code.  So the output of creating a string, is just that same string - not very interesting.
 
 To create a **string** in Python, notice that we place quotes at the start and end of text.  If we don't do this, Python will give us an error.
 
@@ -455,7 +455,7 @@ word_histogram
 
 Ok, now we have two nice data structures.  A `list_of_lyrics` of all of our words, and a `word_histogram` to keep track of the amount of words.  It seems like we're making good progress.  Let's look again at our plan.
 
-* Place each of the words on a separate index card. 
+* Place each of the words on a separate index card.
     * **Complete** as `list_of_lyrics`
 * Allocate space for a small pile for each unique word
     * **Complete** as `word_histogram`
@@ -487,7 +487,7 @@ Ok, so here we want to go through the elements of our `list_of_lyrics` one by on
 ```python
 word_histogram = dict.fromkeys(unique_words, 0)
 for word in list_of_lyrics:
-    word_histogram[word] = word_histogram[word]+ 1 
+    word_histogram[word] = word_histogram[word]+ 1
 ```
 
 > We said it would be confusing.  Good thing there are more lessons to explain it.  Let's see if it worked.
@@ -553,7 +553,7 @@ word_histogram["Rockin'"]
 
 ### Visualizing the data
 
-We've got our answer in code.  The final step is to turn it into a chart.  We'll use a library -- which is a collection of code we get from the Internet that does not come with Python -- called Plotly to make our charts. 
+We've got our answer in code.  The final step is to turn it into a chart.  We'll use a library -- which is a collection of code we get from the Internet that does not come with Python -- called Plotly to make our charts.
 
 In the first four lines we tell Python to get ready to use this library.  And in the last line we tell Python to plot our `trace`.
 
@@ -575,8 +575,6 @@ trace = {
 plotly.offline.iplot({'data': [trace]})
 ```
 
-
-<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
 
 
 ![](https://learn-verified.s3.amazonaws.com/data-science-assets/first-plot.png)
@@ -605,16 +603,14 @@ init_notebook_mode(connected=True)
 
 
 trace = {
-    'type': 'bar', 
-    'x': list(unique_words), 
+    'type': 'bar',
+    'x': list(unique_words),
     'y': list(word_histogram.values())
     }
 
 plotly.offline.iplot({'data': [trace]})
 ```
 
-
-<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
 
 
 ![](https://learn-verified.s3.amazonaws.com/data-science-assets/histogram.png)
@@ -655,8 +651,6 @@ trace = {'type': 'bar', 'x': list(unique_words), 'y': list(word_histogram.values
 plotly.offline.iplot({'data': [trace]})
 ```
 
-
-<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
 
 
 ![](https://learn-verified.s3.amazonaws.com/data-science-assets/histogram.png)

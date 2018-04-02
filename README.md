@@ -704,6 +704,6 @@ plotly.offline.iplot({'data': [trace]})
 <script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
 
 
-![](./histogram.png)
+![](https://learn-verified.s3.amazonaws.com/data-science-assets/histogram.png)
 
 These next sections will go through each of the topics above, so that we can use the tools above to explore information with code.

@@ -89,7 +89,7 @@ Ah, ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann Oh Barbara Ann, take my hand
 ```
 
 
-      File "<ipython-input-2-44af718de734>", line 1
+      File "<ipython-input-3-44af718de734>", line 1
         Ah, ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann Oh Barbara Ann, take my hand Barbara Ann You got me rockin' and a-rollin' Rockin' and a-reelin' Barbara Ann ba ba Ba Barbara Ann Went to a dance, lookin' for romance Saw Barbara Ann, so I thought I'd take a chance With Barbara Ann, Barbara Ann Take my hand You got me rockin' and a-rollin' (Oh! Oh!) Rockin' and a-reelin' Barbara Ann ba ba Ba ba ba ba black sheep Ba ba ba ba Barbara Ann Ba ba ba ba Barbara Ann
                 ^
     SyntaxError: invalid syntax
@@ -544,13 +544,6 @@ Ok, that's it.  Now if we want to see how many times 'Rockin' appears, we can do
 word_histogram["Rockin'"]
 ```
 
-
-
-
-    4
-
-
-
 ### Visualizing the data
 
 We've got our answer in code.  The final step is to turn it into a chart.  We'll use a library -- which is a collection of code we get from the Internet that does not come with Python -- called Plotly to make our charts. 
@@ -575,23 +568,12 @@ trace = {
 plotly.offline.iplot({'data': [trace]})
 ```
 
-
-<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
-
-
 ![](https://learn-verified.s3.amazonaws.com/data-science-assets/first-plot.png)
 
 
 ```python
 trace
 ```
-
-
-
-
-    {'type': 'bar', 'x': ['Barbara', 'Ann'], 'y': [12, 3]}
-
-
 
 Above you can see that `x` points to an array of the x values, our list of words, and `y` points to an array of y values, the number of times each word appears. So, let's then set `x` and `y` equal to our `unique_words` and the amount of times those words appear:
 
@@ -612,10 +594,6 @@ trace = {
 
 plotly.offline.iplot({'data': [trace]})
 ```
-
-
-<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
-
 
 ![](https://learn-verified.s3.amazonaws.com/data-science-assets/histogram.png)
 
@@ -652,12 +630,8 @@ import plotly.graph_objs as go
 init_notebook_mode(connected=True)
 
 trace = {'type': 'bar', 'x': list(unique_words), 'y': list(word_histogram.values())}
-plotly.offline.iplot({'data': [trace]})
+
 ```
-
-
-<script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window.Plotly) {{require(['plotly'],function(plotly) {window.Plotly=plotly;});}}</script>
-
 
 ![](https://learn-verified.s3.amazonaws.com/data-science-assets/histogram.png)
 

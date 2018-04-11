@@ -55,7 +55,7 @@ It keeps going, but you get the point.  Now let's say that we wanted to count up
 
 Let's call these steps above **our plan**.  At the end of this lesson and after completing each step of our above plan, we will have a chart, like the one below, giving us a visualization of the most repitious words in the Beach Boys' song, *Barbara Ann*. 
 
-![](https://s3.amazonaws.com/learn-verified/data-science-assets/beach_boys_barabara_ann_lyric_repition_graph.png)
+![](https://s3.amazonaws.com/learn-verified/data-science-assets/beach_boys_repitition_chart.png)
 
 Great! Now let's translate our plan into code and make our chart!
 

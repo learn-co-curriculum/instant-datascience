@@ -315,7 +315,7 @@ plotly.offline.iplot({'data': [trace]})
 
 Above we can see that `x` points to a `list` of the `unique_words`, and `y` points to the `list` of values from our `word_histogram`, which represent the number of times each word appears. 
 
-We now have plotted our words. The Beach Boys say "Ba" 19 times and remember we only copied over some of the lyrics.  Repetitive indeed.
+We have now plotted our words! We can see that The Beach Boys say "Ba" 19 times, and remember we only copied over some of the lyrics!  Repetitive indeed.
 
 ### Summary
 

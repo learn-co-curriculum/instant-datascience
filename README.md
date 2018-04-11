@@ -314,8 +314,8 @@ We have now plotted our words! We can see that The Beach Boys say "Ba" 19 times,
 
 ### Summary
 
-In the first twenty lessons, we will cover these topics and more. Hopefully, in this section you can see that even with just a bit of knowledge we can really put code to use. It may have seemed like a lot of work, but the work was in the learning, not the code.  
+Hopefully, in this section you can see that even with just a bit of knowledge we can really put code to use. It may have seemed like a lot of work, but the work was in the learning, not the code.  
 
 All of the code written so far was really just six lines of code plus another 8 lines to plot our chart, giving us a grand total of a mere 14 lines of code! 
 
-These next sections will go through each of the topics we introduced in this lesson, so that we can begin use the tools above to explore information with code.
+In the following sections, we will cover the topics we introduced in this lesson and more, so that we can begin use the tools above to explore information with code.

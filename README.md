@@ -301,12 +301,7 @@ from plotly import tools
 import plotly.graph_objs as go
 init_notebook_mode(connected=True)
 
-
-trace = {
-    'type': 'bar', 
-    'x': list(unique_words), 
-    'y': list(word_histogram.values())
-    }
+trace = {'type': 'bar', 'x': list(unique_words), 'y': list(word_histogram.values())}
 
 plotly.offline.iplot({'data': [trace]})
 ```

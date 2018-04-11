@@ -12,7 +12,7 @@ To do so, we will be introducing the following topics:
 * Data visualization: using plots to display data
 * Functions: defining and running specific procedures in code 
 
-This lesson will offer a brief glimpse into each of these topics.  In the rest of the course, we will provide lessons and labs on each of these topics to break down the material step by step.  
+This lesson will offer a brief glimpse into each of these topics. In the rest of the course, we will provide lessons and labs on each of these topics to break down the material step by step. Let's get started!
 
 ### Song Analysis
 
@@ -79,7 +79,7 @@ To solve this problem with code, we do something similar.  We start with our wor
 
 To create a **string** in Python, notice that we place quotes at the start and end of text.  If we don't do this, Python will give us an error.
 
-So, to avoid errors, we need quotes around our text to make a string, but to hold on to this string and reference it later, we assign it to a variable.  
+So, to avoid errors, we need quotes around our text to make a string, but to hold on to this string and reference it later, we assign it to a **variable**. We call it `lyrics`.  
 
 
 ```python

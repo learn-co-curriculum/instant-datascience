@@ -22,6 +22,8 @@ Here is a chart that Colin Morris produced showing some of the most repetitive p
 
 ![](https://learn-verified.s3.amazonaws.com/data-science-assets/song-chart.png)
 
+After finishing the first section of our full-time data science curriculum, you will be able to produce the kind of data analysis you see in Colin Morris' article. Awesome, right?
+
 ### Analyzing one song
 
 Let's take the song *Barbara Ann*, the most repetitive song of the Beach Boys which was remastered by the cast of *Saved by the Bell* in 1990.  

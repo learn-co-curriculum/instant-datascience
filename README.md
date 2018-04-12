@@ -102,12 +102,15 @@ Okay, great. We now have our lyrics assigned to our variable, `lyrics` and we ca
 
 To separate our string into a list of individual words, we need to change this continuous string into a Python `list`.  Here is how we tell the computer to do this: split the string into a different entity every time you see a space.  Here are those directions in code.
 
+> **Note:** we are going to be using methods like `split` and `len` throughout this lesson. Don't worry, we will explain what these methods do in later lessons. For now, focus on following the logic of what the inputs are doing.
+   
+
 
 ```python
 list_of_lyrics = lyrics.split(' ')
 ```
 
-Ok, let's see what `list_of_lyrics` looks like.  You're about to see a lot of words, so just scroll through them, and we'll meet up afterwards.
+Ok, let's see what `list_of_lyrics` looks like.
 
 ```python 
 list_of_lyrics

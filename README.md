@@ -53,7 +53,7 @@ It keeps going, but you get the point.  Now let's say that we wanted to count up
 * While flipping through each index card, find its designated pile and increase the size by one
 
 
-Let's call these steps above **our plan**.  At the end of this lesson and after completing each step of our above plan, we will have a chart, like the one below, giving us a visualization of the most repitious words in the Beach Boys' song, *Barbara Ann*. 
+Let's call these steps above **our plan**.  At the end of this lesson and after completing each step of our above plan, we will have a chart, like the one below, giving us a visualization of the most repetitious words in the Beach Boys' song, *Barbara Ann*. 
 
 ![](https://s3.amazonaws.com/learn-verified/data-science-assets/beach_boys_repitition_chart.png)
 

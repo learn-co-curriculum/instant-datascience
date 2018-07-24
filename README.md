@@ -1,7 +1,7 @@
 
 # Instant Data Science
 
-When starting any course, you likely look at the syllabus to see what's covered and ask yourself if you can do it. In this lesson, we'll hope to give you a sense of how, with just a little bit of knowledge, you can make some real progress in using programs to answer questions with data.  
+When starting any course, you probably look at the syllabus to see what's covered and ask yourself if you can do it. In this lesson, we hope to give you a sense of how, with just a little bit of knowledge, you can make some real progress in using programs to answer questions with data.  
 
 To do so, we will be introducing the following topics:
 * Data types: working with text and data

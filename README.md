@@ -248,7 +248,14 @@ word_histogram["Rockin'"]
 
 ### Visualizing the data
 
-We've got our answer in code.  The final step is to turn it into a chart.  We'll use a library -- which is a collection of code we get from the Internet that does not come with Python -- called Plotly to make our charts. 
+We've got our answer in code.  The final step is to turn it into a chart.  We'll use a library -- which is a collection of code we get from the Internet that does not come with Python -- called Plotly to make our charts.
+
+If you do not have Plotly, you can install it using:
+
+
+```python
+!pip install plotly==3.3.0
+```
 
 In the first four lines we tell Python to get ready to use this library.  And in the last line we tell Python to plot our `trace`.
 
